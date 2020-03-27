@@ -32,7 +32,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', title='about')
 
 '''makingdebug = true so to run the app in debut mode so tha tpage can update automatically'''
 if __name__ == '__main__':
