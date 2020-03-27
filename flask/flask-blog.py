@@ -9,6 +9,22 @@ app = Flask(__name__)
 def hello_world():
     return '<h1>Home page</h1>' '''
 
+   posts = [
+   {
+   'author': 'chaitanya'
+   'title': 'Blog post 1'
+   'content': 'first post content'
+   'date_posted': 'march 29, 2020'
+   },
+{
+	'author': 'chinuon'
+   'title': 'Blog post 2'
+   'content': 'second post content'
+   'date_posted': 'march 30, 2020'
+}
+   ]
+
+
 @app.route('/')
 @app.route('/home')
 def home():
