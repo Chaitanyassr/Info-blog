@@ -1,5 +1,5 @@
 '''Flask that is a class is getting imported form flask'''
-from flask import Flask
+from flask import Flask, render_template
 '''here we create an app variable using instance Flask and pass variable --name--'''
 app = Flask(__name__)
 
@@ -12,11 +12,11 @@ def hello_world():
 @app.route('/')
 @app.route('/home')
 def home():
-    return '<h1>Home page</h1>'
+    return render_template('home.html')
 
 @app.route('/about')
 def about():
-    return '<h1>About page</h1>'
+    return render_template('about.html')
 
 '''makingdebug = true so to run the app in debut mode so tha tpage can update automatically'''
 if __name__ == '__main__':
